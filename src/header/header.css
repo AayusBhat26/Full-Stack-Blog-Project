@@ -1,0 +1,17 @@
+.header {
+  color: whitesmoke;
+  margin: 1vw;
+  margin-top: 3%;
+  border:1px solid rgb(0, 251, 255);
+  padding: 0.5vw;
+  border-radius: 5px;
+  height: 5vh;
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  /* box-shadow: ; */
+  /* for aricle  */
+  /* -webkit-box-shadow: -20px -9px 40px -6px rgba(166, 146, 166, 1);
+  -moz-box-shadow: -20px -9px 40px -6px rgba(166, 146, 166, 1);
+  box-shadow: -20px -9px 40px -6px rgba(166, 146, 166, 1); */
+}

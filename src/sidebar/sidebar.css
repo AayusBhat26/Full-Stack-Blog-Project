@@ -1,0 +1,40 @@
+* {
+  transition: 1s;
+}
+.sidebar:hover{
+      transform: scale(1.05);
+}
+.sidebar {
+  /* -webkit-box-shadow: -10px -25px 91px -13px rgba(205,222,165,1);
+  
+-moz-box-shadow: -10px -25px 91px -13px rgba(205,222,165,1);
+box-shadow: -10px -25px 91px -13px rgba(205,222,165,1); */
+-webkit-box-shadow: 10px 11px 76px 9px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 11px 76px 9px rgba(0,0,0,0.75);
+box-shadow: 10px 11px 76px 9px rgba(0,0,0,0.75);
+  color: whitesmoke;
+  flex: 2;
+  /* border: 3px solid red; */
+}
+.MyImage {
+  width: 30%;
+  height: 60%;
+}
+.sidebarItem .myImage {
+  display: grid;
+  place-items: center;
+}
+.Name {
+  font-size: 2vw;
+}
+p {
+  margin-top: 20px;
+  font-size: 22px;
+}
+.sidebarItem {
+  text-align: center;
+}
+.socials {
+  text-align: center;
+  margin-top: 5vh;
+}
