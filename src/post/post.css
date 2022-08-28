@@ -1,0 +1,45 @@
+.post{
+      width: 80%;
+      /* margin: 50px; */
+      /* border: 10px solid red; */
+      /* align-items: alig; */
+}
+.postTitle{
+      color: rgb(99, 232, 219);
+      font-size:24px;
+}
+.postInfo{
+      text-align: center;
+}
+.post >img{
+      border: 1px solid rgb(52, 221, 234);
+      width: 23vw;
+      height: 20vh;
+      border-radius: 20px;
+}
+/* .postInfo{
+      color: red;
+      
+      text-align: center;
+} */
+/* .postInfo:hover::after
+,.postInfo:hover::after{
+      position: absolute;
+      content: '';
+      top: 10.5rem;
+      left: 42rem;
+      height: 25px;
+      width: 285px;
+      background: black;
+} */
+.description > .time{
+      color:rgb(210, 187, 55);
+      font-size: 12px;
+      text-align: center;
+}
+.description > .desPara{
+      text-align: center;
+      color:rgb(210, 187, 55);
+      font-size: 12px;
+      /* object-fit: cover; */
+}
