@@ -27,7 +27,7 @@ export default function Topbar() {
             alt="image"
           />
           {/* <i class="fa-brands fa-searchengin" className="topSearchIcon"></i> */}
-          <i class="fa-solid fa-folder-tree"></i>
+          <i className="fa-solid fa-folder-tree searchIcon"></i>
         </div>
       </div>
     </div>

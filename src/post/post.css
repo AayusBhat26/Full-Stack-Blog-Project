@@ -1,21 +1,24 @@
-.post{
-      width: 80%;
-      /* margin: 50px; */
-      /* border: 10px solid red; */
-      /* align-items: alig; */
+.post {
+  width: 80%;
+  -webkit-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
+  /* margin: 50px; */
+  /* border: 10px solid red; */
+  /* align-items: alig; */
 }
-.postTitle{
-      color: rgb(99, 232, 219);
-      font-size:24px;
+.postTitle {
+  color: rgb(99, 232, 219);
+  font-size: 24px;
 }
-.postInfo{
-      text-align: center;
+.postInfo {
+  text-align: center;
 }
-.post >img{
-      border: 1px solid rgb(52, 221, 234);
-      width: 23vw;
-      height: 20vh;
-      border-radius: 20px;
+.post > img {
+  border: 1px solid rgb(52, 221, 234);
+  width: 100%;
+  height: 20vh;
+  border-radius: 20px;
 }
 /* .postInfo{
       color: red;
@@ -32,14 +35,49 @@
       width: 285px;
       background: black;
 } */
-.description > .time{
-      color:rgb(210, 187, 55);
-      font-size: 12px;
-      text-align: center;
+.description > .time {
+  color: rgb(210, 187, 55);
+  font-size: 12px;
+  text-align: center;
 }
-.description > .desPara{
-      text-align: center;
-      color:rgb(210, 187, 55);
-      font-size: 12px;
-      /* object-fit: cover; */
+.description > .desPara {
+  text-align: center;
+  color: rgb(210, 187, 55);
+  font-size: 12px;
+  /* object-fit: cover; */
+}
+
+@media screen and (max-width: 768px) {
+  .post > img {
+    width: 300px;
+  }
+  .post {
+    display: grid;
+    /* text-align: center; */
+    grid-template-columns: min-content;
+    color: red;
+  }
+}
+@media screen and (max-width: 375px) {
+  .posts {
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 821px) {
+  .post > img {
+    width: 100%;
+  }
+  .post {
+    margin-right: 3px;
+    width: 36.5vw;
+  }
+}
+
+@media screen and (max-width: 913px) {
+  .post > img {
+    width: 100%;
+  }
+  .post {
+      width: 34.5vw;
+  }
 }

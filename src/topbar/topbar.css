@@ -28,7 +28,6 @@ html{
 }
 
 .top {
- 
   border-radius: 7px;
   width: 100%;
   height: 5vh;
@@ -101,5 +100,26 @@ li {
   /* color: red; */
   cursor: pointer;
 }
-
+/* 768px */
+/* 600px */
+@media screen and (max-width: 600px) {
+  .topLeft{
+    display: none;
+  }
+  .topImage{
+    display: none;
+  }
+  .searchIcon{
+    display: none;
+  }
+  .topMiddle .topList{
+    /* width: 100%; */
+    color: red;
+  }
+  .top{
+    /* width: 100%; */
+    /* border-radius: 10px; */
+    margin: 1px;
+  }
+}
 /*  in order to use locally stored images in react. <img src={require("/images/image-name.png")} /> */
