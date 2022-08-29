@@ -1,6 +1,7 @@
 .posts {
   margin: 2vw;
-  padding: 20px;
+  /* padding: 40px; */
+  /* border: 2px solid red; */
   flex: 9;
   display: grid;
   /* flex-direction: row; */
@@ -40,5 +41,12 @@
       /* border: 10px solid red; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 421px) {
+  .posts{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 }

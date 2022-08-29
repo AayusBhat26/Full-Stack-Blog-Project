@@ -6,7 +6,9 @@ export default function posts() {
     <div className="posts">
       <Post />
       <Post />
-      {/* <Post /> */}
+      <Post />
+      <Post />
+      <Post />
       <Post />
       <Post />
       <Post />

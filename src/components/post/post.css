@@ -1,4 +1,8 @@
 .post {
+    /* border: 2px solid red; */
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
   width: 80%;
   -webkit-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
@@ -8,7 +12,8 @@
   /* align-items: alig; */
 }
 .postTitle {
-  color: rgb(99, 232, 219);
+  /* color: rgb(99, 232, 219); */
+  color: whitesmoke;
   font-size: 24px;
 }
 .postInfo {
@@ -42,22 +47,27 @@
 }
 .description > .desPara {
   text-align: center;
-  color: rgb(210, 187, 55);
-  font-size: 12px;
+  /* color: rgb(210, 187, 55); */
+  color: whitesmoke;
+  font-size: 16px;
   /* object-fit: cover; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .post > img {
-    width: 300px;
-  }
-  .post {
+    /* width: 300px; */
+  /* } */
+  /* .post {
     display: grid;
+    
     /* text-align: center; */
-    grid-template-columns: min-content;
-    color: red;
-  }
-}
+    /* grid-template-columns: min-content; */
+    /* color: red */
 @media screen and (max-width: 375px) {
   .posts {
     margin-right: 0px;
@@ -79,5 +89,26 @@
   }
   .post {
       width: 34.5vw;
+  }
+}
+@media screen and (max-width: 493px) {
+  .post .description{
+    display: none;
+  }
+  .post{
+    width: 39vw;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .post{
+    margin-top: 10px;
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 394px) and (max-width: 413px) {
+  .post{
+    margin-right: 25.5px;
   }
 }
