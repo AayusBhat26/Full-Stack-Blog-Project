@@ -3,10 +3,10 @@
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
-  width: 80%;
-  -webkit-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.75);
+  /* width: 100vw; */
+  -webkit-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.71);
+    box-shadow: 10px 11px 76px 9px rgba(0, 0, 0, 0.72);
   /* margin: 50px; */
   /* border: 10px solid red; */
   /* align-items: alig; */
@@ -109,6 +109,6 @@
 }
 @media screen and (min-width: 394px) and (max-width: 413px) {
   .post{
-    margin-right: 25.5px;
+    margin-right: 50.5px;
   }
 }

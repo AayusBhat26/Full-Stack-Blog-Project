@@ -1,5 +1,7 @@
-import SinglePost from '../../../singlePost/SinglePost'
-import SidebarPost from '../../sidebarpost/SidebarPost'
+// import SinglePost from '../../../singlePost/SinglePost'
+// import SidebarPost from '../../sidebarpost/SidebarPost'
+import Sidebar from '../../sidebar/Sidebar'
+import SinglePost from '../../singlePost/SinglePost';
 import './single.css'
 export default function Single() {
   return (
@@ -7,7 +9,8 @@ export default function Single() {
       <div className="single">
         {/* single */}
         <SinglePost />
-        <SidebarPost />
+        <Sidebar />
+        {/* <Post></Post> */}
       </div>
     </>
   );

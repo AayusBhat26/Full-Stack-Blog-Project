@@ -23,8 +23,10 @@
 }
 @media screen and (max-width: 415px) {
   .posts {
+    width: 100vw;
+  /* border:1px solid red; */
     margin-top: 1vh;
-    margin-left: 10vw;
+    margin-left: 6vw;
   }
 }
 @media screen and (max-width: 821px) {
@@ -43,6 +45,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* check  */
 @media screen and (max-width: 421px) {
   .posts{
     display: grid;
