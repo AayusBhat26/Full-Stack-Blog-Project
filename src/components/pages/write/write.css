@@ -1,0 +1,72 @@
+.write{
+      padding-top: 5%;
+      color: whitesmoke;
+}
+.writeIcon{
+      margin-bottom: 50px;
+      float: right;
+      margin-right:55%;
+}
+.fileInputClass{
+      display: none;
+}
+.writeForm{
+      /* this should be relative since the button would be positioned absolute */
+      position: relative;
+}
+.writeFormGroup{
+      margin-left: 150px;
+      /* display: flex; */
+      /* align-items: center; */
+}
+.writeIcon{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgb(196, 173, 173);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: rgb(138, 219, 16);
+      cursor: pointer;
+}
+.writeInput{
+      font-size: 30px;
+      border: none;
+      padding: 20px;
+      width: 70vw;
+
+}
+.writeInput:focus{
+      outline: none;
+}
+.writeText{
+      font-size: 20px;
+}
+.writeSubmit{
+      /* position: absolute; */
+      /* top: 20px; */
+      /* right: 20px; */
+      /* margin-top: 3vh; */
+      float:right;
+      margin-right: 50%;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      border: none;
+}
+.writeImg{
+      margin-left: 10%;
+      width: 70vw;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+}
+.writeText{
+      margin-top: 2vw;
+      width: 70vw;
+      height: 50vh;
+
+}
