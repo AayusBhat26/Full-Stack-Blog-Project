@@ -1,0 +1,80 @@
+.settings {
+  display: flex;
+}
+.settingsWrapper {
+  flex: 10;
+  padding: 23px;
+}
+#fileInput {
+  display: none;
+}
+.settingsPP > img {
+  width: 12vw;
+  border-radius: 20px;
+  height: 20vh;
+  object-fit: cover;
+}
+.settingPPIcon {
+  /* font-size: 100px; */
+  width: 10vw;
+  height: 10vh;
+  border-radius: 50%;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.settingsTitle {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+.settingsUpdateTitle {
+  font-size: 32px;
+  margin-bottom: 4%;
+  color: rgb(135, 135, 208);
+}
+.settingsDeleteTitle {
+  color: rgb(244, 73, 73);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+.settingsPP{
+      display: flex;
+      align-items: center;
+      margin: 4vh 0px;
+}
+.settingsForm {
+  display: flex;
+  flex-direction: column;
+}
+.settingsForm  > label {
+      font-size: 22px;
+  color: rgb(150, 150, 207);
+  margin-top: 1vw;
+}
+.settingsForm > input{
+      color: gainsboro;
+      margin: 12px 0px;
+      height: 28px;
+      border: none;
+      border-bottom: 1px solid rgb(218, 233, 79);
+
+
+}
+.settingsButton{
+      width: 120px;
+      background-color:  rgb(135, 135, 208);
+      align-self: center;
+      border: none;
+      border-radius: 12px;
+      color: black;
+      padding: 12px;
+      margin-top: 21px;
+      cursor: pointer;
+}
