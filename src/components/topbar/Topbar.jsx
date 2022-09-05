@@ -1,7 +1,8 @@
 import "./topbar.css";
-
+import {Link} from 'react-router-dom';
 
 export default function Topbar() {
+  const user= false;
   return (
     <div id="mainDiv">
       <div className="top">
@@ -13,21 +14,45 @@ export default function Topbar() {
         </div>
         <div className="topMiddle">
           <ul className="topList">
-            <li className="topListItem">Home</li>
-            <li className="topListItem">About</li>
-            <li className="topListItem">Contact</li>
-            <li className="topListItem">Write</li>
-            <li className="topListItem">LogOut</li>
+            <li className="topListItem">
+              <Link to="/">Home</Link>
+            </li>
+            {/* <li className="topListItem">About</li> */}
+            {/* <li className="topListItem">Contact</li> */}
+            <li className="topListItem">
+              <Link to="/write">Write</Link>
+            </li>
+            <li className="topListItem">{user && "LOGOUT"}</li>
           </ul>
         </div>
         <div className="topRight">
-          <img
+          {user ? (
+            <>
+              <img
+                className="topImage"
+                src={require("../images/Project-My-Image-temp.jpg")}
+                alt="image"
+              />
+
+              <i className="fa-solid fa-folder-tree searchIcon"></i>
+            </>
+          ) : (
+            <ul className="topList">
+              <li className="topListItem">
+                <Link to="/register">Register</Link>
+              </li>
+
+              <li className="topListItem">
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          )}
+          {/* <img
             className="topImage"
             src={require("../images/Project-My-Image-temp.jpg")}
             alt="image"
-          />
+          /> */}
           {/* <i class="fa-brands fa-searchengin" className="topSearchIcon"></i> */}
-          <i className="fa-solid fa-folder-tree searchIcon"></i>
         </div>
       </div>
     </div>
