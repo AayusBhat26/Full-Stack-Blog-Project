@@ -3,9 +3,9 @@ const app = express();
 const PORT = 3002;
 const dotEnv = require("dotenv"); dotEnv.config();
 const mongoose = require("mongoose");
-
 const authRoute = require('./routes/auth');
 const userRoute = require("./routes/users");
+const postRoute = require("./routes/posts");
 
 // as i tried to the send the json object from postman, this app or server was not able to send the same, in order to fix this error, we would use, express.json() method.
 
@@ -23,11 +23,14 @@ app.use('/api/auth', authRoute)
 // user route
 app.use("/api/users", userRoute);
 
+// post route
+app.use("/api/posts", postRoute);
 
 
-app.use("/", (req, res) => {
-  console.log("Home page");
-});
+
+// app.use("/", (req, res) => {
+//   console.log("Home page");
+// });
 app.listen(PORT, (req, res) => {
   console.log(`Server listening on ${PORT}`);
 });

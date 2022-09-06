@@ -80,4 +80,22 @@ router.post("/login", async (req, res) => {
   } catch (err) {}
 });
 
+
+// get a single user
+
+router.get('/:id', async (req, res) => {
+  try{
+    const user = await Users.findById(req.params.id);
+    const { password, ...leftOvers } = user._doc;
+    res.status(200).json({
+      leftOvers,
+      message: "User found",
+    });
+  }catch(err){
+    res.status(500).json({
+      message:`error occurred ${err.message}`
+    })
+  }
+});
+
 module.exports = router;

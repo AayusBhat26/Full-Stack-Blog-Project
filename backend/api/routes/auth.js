@@ -24,6 +24,7 @@ router.post('/register', async(req, res)=>{
 
             // once the user has been created, i will set the status as 200 and send the user in the form of json.
              return res.status(200).json({
+                  user,
                status: "success"
              });
       }
@@ -71,3 +72,7 @@ router.post('/login', async(req, res)=>{
 })
 
 module.exports = router;
+
+
+
+// for register => localhost:3002/api/auth/register
