@@ -7,7 +7,7 @@ const authRoute = require('./routes/auth');
 const userRoute = require("./routes/users");
 const postRoute = require("./routes/posts");
 const categoryRoute = require("./routes/categories");
-// as i tried to the send the json object from postman, this app or server was not able to send the same, in order to fix this error, we would use, express.json() method.
+// as i tried to the send the json object fromcd postman, this app or server was not able to send the same, in order to fix this error, we would use, express.json() method.
 const multer = require('multer'); // in order to upload images.
 
 

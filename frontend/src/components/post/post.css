@@ -1,3 +1,6 @@
+*::first-letter{
+  text-transform: capitalize;
+}
 .post {
     /* border: 2px solid red; */
     cursor: pointer;
@@ -14,7 +17,9 @@
 .postTitle {
   /* color: rgb(99, 232, 219); */
   color: whitesmoke;
-  font-size: 24px;
+  /* padding: 10px; */
+  text-align: center;
+  font-size: 21px;
 }
 .postInfo {
   text-align: center;
@@ -44,6 +49,9 @@
   color: rgb(210, 187, 55);
   font-size: 12px;
   text-align: center;
+}
+.description .postCategories{
+  color: red;
 }
 .description > .desPara {
   text-align: center;

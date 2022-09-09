@@ -1,23 +1,35 @@
+// import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./post.css";
 
-export default function Post() {
+export default function Post({ postDetails }) {
+  // let [date, setDate] = useState("");
   return (
     <div className="post">
+      {postDetails.photo && (
+        <img
+          src={require("../images/javascript.png")}
+          alt=""
+          className="MyImage"
+        />
+      )}
       {/* <Toolkit /> */}
-      <img
-        src={require("../images/javascript.png")}
-        alt=""
-        className="MyImage"
-      />
+
       <div className="postInfo" data-tooltip="JavaScript - Tutorial">
-        <span className="postTitle">JavaScript</span>
         <hr />
       </div>
       <div className="description">
-            <p className="time">1 Hour Ago</p>
-            <p className="desPara">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, earum nobis. Distinctio error, asperiores ab ratione ullam libero, sapiente quis in culpa deleniti enim? Placeat, corporis? Odio beatae quos perspiciatis.
-            </p>
+        <div className="postCategories">
+          {postDetails.categories.map((eachCat) => {
+            return <span className="postCat">{console.log(eachCat.name)}</span>;
+          })}
+        </div>
+        <Link to={`/post/${postDetails._id}`} className='link'>
+          <span className="postTitle">{postDetails.title}</span>
+        </Link>
+        <p className="time">{new Date(postDetails.createdAt).toDateString()}</p>
+        <p className="desPara">{postDetails.desc}</p>
       </div>
     </div>
   );
