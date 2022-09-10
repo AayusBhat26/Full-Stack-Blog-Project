@@ -5,15 +5,17 @@ import Posts from "../../posts/Posts";
 import Sidebar from "../../sidebar/Sidebar";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
+  const location = useLocation();
+  // console.log(location);
+
   useEffect(()=>{
     const fetchPosts = async()=>{
       const res = await axios.get('/posts');
       setPosts(res.data);
-
     }
     fetchPosts();
   }, [])
@@ -25,7 +27,7 @@ export default function Home() {
         <Posts posts = {posts}/>
         {/* <Posts / > */}
         {/* <Posts></Posts> */}
-        <Sidebar / >
+        {/* <Sidebar / > */}
 
       </div>
     </>

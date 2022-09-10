@@ -9,7 +9,6 @@ export default function SinglePost() {
   const pathId = location.pathname.split("/")[2];
 
   const [post, setPost] = useState({});
-
   useEffect(() => {
     const fetchPost = async () => {
       // fetching the post which was clicked by the user.

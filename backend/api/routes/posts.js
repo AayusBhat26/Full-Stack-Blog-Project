@@ -5,6 +5,15 @@ const Users = require("../models/Users");
 const Posts = require("../models/Posts");
 // const User = require("../models/Users");
 
+const url = require('url');
+
+
+
+
+const queryString = require('querystring');
+
+// const params 
+
 // create a new post
 router.post("/", async (req, res) => {
   const newPost = new Posts(req.body);
@@ -105,9 +114,12 @@ router.get("/:id", async (req, res) => {
 
 // getting all the posts
 router.get("/", async (req, res) => {
-      const username = req.query.user;
-      console.log(username)
-      // const categoryName = req.query.cate;
+  // const urlParams = new URLSearchParams(location.search);
+      const username = req.query.name;
+      const categoryName = req.query.cate;
+      // console.log("username: ",typeof(username))
+      // console.log(req.query.username);
+      console.log("hi, ", req.query.name);
 
   try {
       let postsArray;

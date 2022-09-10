@@ -9,7 +9,7 @@ export default function Single() {
       <div className="single">
         {/* single */}
         <SinglePost />
-        <Sidebar />
+        {/* <Sidebar /> */}
         {/* <Post></Post> */}
       </div>
     </>

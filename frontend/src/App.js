@@ -17,18 +17,18 @@ function App() {
     <BrowserRouter>
       <Topbar />
       <Routes>
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={user ? <Home/> :<Register />} />
-        <Route path="/write" element={user ? <Write /> :<Register/>} />
-        <Route path="/settings" element={user ?<Settings /> :<Register/>}/>
-        <Route path="/post/:postId" element={<Single />} /> */}
-        {/* <Route path="/about" component={About} /> */}
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/register" element={user ? <Home /> : <Register />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/write" element={user ? <Write /> : <Register />} />
+        <Route exact path="/settings" element={user ? <Settings /> : <Register />} />
+        <Route exact path="/post/:postId" element={<Single />} />
       </Routes>
+      {/* <Route path="/about" component={About} />
       {/* <Single /> */}
       {/* <Write /> */}
       {/* <Settings /> */}
-      <Home/>
+      <Home />
       {/* <Login/> */}
 
       {/* <Register/> */}
