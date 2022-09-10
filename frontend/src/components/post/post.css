@@ -1,6 +1,4 @@
-*::first-letter{
-  text-transform: capitalize;
-}
+
 .post {
     /* border: 2px solid red; */
     cursor: pointer;
