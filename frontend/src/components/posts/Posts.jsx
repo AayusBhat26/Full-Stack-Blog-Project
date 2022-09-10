@@ -9,14 +9,8 @@ import "./posts.css";
 export default function posts({ posts }) {
   return (
     <div className="posts">
-            {/* <Post / > */}
-              {
-                posts.map((singlePostProp)=>{
-                  // console.log(p)
-                  return <Post postDetails = {singlePostProp}/>
-                })
-              }
-        {/* <Sidebar /> */}
+      <Post />
+      {/* <Sidebar /> */}
     </div>
   );
 }

@@ -5,25 +5,32 @@ import Posts from "../../posts/Posts";
 import Sidebar from "../../sidebar/Sidebar";
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import { useLocation } from "react-router-dom";
 
 export default function Home() {
-  const [posts, setPosts] = useState([]);
+  // const [posts, setPosts] = useState([]);
+  // const location = useLocation();
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const result = await axios.get("/posts");
-      // console.log(result);
-      setPosts(result.data);
-    };
-    fetchPosts();
-  },[]);
+  // console.log(`hi ${location.pathname}`)
+
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const result = await axios.get("/posts");
+  //     setPosts(result.data);
+  //     // console.log(result.data);
+  //   };
+  //   fetchPosts();
+  // },[]);
+
 
   // using the empty array means, use the useEffect hook just at the beginning
   return (
     <>
       <Header />
       <div className="home">
-        <Posts posts = {posts}/>
+        {/* <Posts posts = {posts}/> */}
+        <Posts / >
+        {/* <Posts></Posts> */}
         <Sidebar / >
       </div>
     </>

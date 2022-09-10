@@ -106,26 +106,29 @@ router.get("/:id", async (req, res) => {
 // getting all the posts
 router.get("/", async (req, res) => {
       const username = req.query.user;
-      const categoryName = req.query.cate;
+      console.log(username)
+      // const categoryName = req.query.cate;
 
   try {
       let postsArray;
       if (username) {
       //   postsArray = await Posts.find({ username:username });
         postsArray = await Posts.find({ username });
-      }else if(categoryName){
-            postsArray = await Posts.find({ categories:{
-                  $in:[categoryName]
-            } });
       }
-      else{
+       else{
             // if there are no username or categoryName just return all the posts.
             postsArray = await Posts.find();
       }
       res.status(200).json(
             postsArray 
       )
-  } catch (err) {
+  } 
+      // }else if(categoryName){
+      //       postsArray = await Posts.find({ categories:{
+      //             $in:[categoryName]
+      //       } });
+      
+     catch (err) {
     res.status(500).json({
       message: `error occurred ${err.message}`,
     });

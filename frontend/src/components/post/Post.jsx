@@ -22,7 +22,7 @@ export default function Post({ postDetails }) {
       <div className="description">
         <div className="postCategories">
           {postDetails.categories.map((eachCat) => {
-            return <span className="postCat">{console.log(eachCat.name)}</span>;
+            return <span className="postCat">{eachCat.name}</span>;
           })}
         </div>
         <Link to={`/post/${postDetails._id}`} className='link'>

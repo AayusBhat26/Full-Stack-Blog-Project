@@ -37,9 +37,10 @@ export default function Sidebar() {
         <ul className="sideBarList">
           {/* <li>hi</li> */}
           {cates.map((eachCategory) => {
-            <li className="sideBarListItem">{
-              console.log(eachCategory.name)
-            }</li>;
+           return <li className="sideBarListItem">{
+            eachCategory.name
+          //  console.log(eachCategory.name)
+           }</li>;
           })}
         </ul>
       </div>

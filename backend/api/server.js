@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const PORT = 3002;
+// const cors = require("cors");
+const PORT = 5000;
 const dotEnv = require("dotenv"); dotEnv.config();
 const mongoose = require("mongoose");
 const authRoute = require('./routes/auth');
@@ -10,16 +11,22 @@ const categoryRoute = require("./routes/categories");
 // as i tried to the send the json object fromcd postman, this app or server was not able to send the same, in order to fix this error, we would use, express.json() method.
 const multer = require('multer'); // in order to upload images.
 
-
+// app.use(cors);
 app.use(express.json());
 // const mongoose = require('mongoose');
 //Set up default mongoose connection
-mongoose.connect(process.env.Mongo_Url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(console.log('Connected to mongo')).catch(err=>{
-      console.log('Error occured: ' + err.message);
-});
+mongoose
+  .connect(
+    "mongodb+srv://MainAayushBhat:Aayushbhat2606@cluster-blog-app.vgfbphb.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(console.log("Connected to mongo"))
+  .catch((err) => {
+    console.log("Error occured: " + err.message);
+  });
 
 // creating space for images for multer
 const storage = multer.diskStorage({
