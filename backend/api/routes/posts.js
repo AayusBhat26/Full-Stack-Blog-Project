@@ -5,14 +5,11 @@ const Users = require("../models/Users");
 const Posts = require("../models/Posts");
 // const User = require("../models/Users");
 
-const url = require('url');
+const url = require("url");
 
+const queryString = require("querystring");
 
-
-
-const queryString = require('querystring');
-
-// const params 
+// const params = new URLSearchParams(location.search);
 
 // create a new post
 router.post("/", async (req, res) => {
@@ -67,11 +64,11 @@ router.delete("/:id", async (req, res) => {
     const post = await Posts.findById(req.params.id);
     if (post.username === req.body.username) {
       try {
-            await post.delete();
+        await post.delete();
 
-       return res.status(200).json({
-            message:"Post Has Been deleted."
-       });
+        return res.status(200).json({
+          message: "Post Has Been deleted.",
+        });
       } catch (error) {
         return res.status(500).json({
           message: `${err.message}`,
@@ -89,14 +86,12 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-
-
 // get a single user
 
 router.get("/:id", async (req, res) => {
   try {
     const post = await Posts.findById(req.params.id);
-//     const { password, ...leftOvers } = Posts._doc;
+    //     const { password, ...leftOvers } = Posts._doc;
     res.status(200).json({
       post,
       message: "Post found",
@@ -108,45 +103,46 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-
-
-
-
 // getting all the posts
 router.get("/", async (req, res) => {
-  // const urlParams = new URLSearchParams(location.search);
-      const username = req.query.name;
-      const categoryName = req.query.cate;
-      // console.log("username: ",typeof(username))
-      // console.log(req.query.username);
-      console.log("hi, ", req.query.name);
+  // console.log(req.query.user);
+  const username = req.query.user;
+  const categoryName = req.query.cate;
+  // console.log("username: ",typeof(username))
+  // console.log(req.query.username);
+  // console.log("hi, ", req.query.name);
+  // console.log(params.has('username'));
 
   try {
-      let postsArray;
-      if (username) {
+    // let tempUser = await Posts.find({ username });
+    let postsArray;
+    if (username) {
       //   postsArray = await Posts.find({ username:username });
-        postsArray = await Posts.find({ username });
-      }
-       else{
-            // if there are no username or categoryName just return all the posts.
-            postsArray = await Posts.find();
-      }
-      res.status(200).json(
-            postsArray 
-      )
-  } 
-      // }else if(categoryName){
-      //       postsArray = await Posts.find({ categories:{
-      //             $in:[categoryName]
-      //       } });
+      postsArray = await Posts.find({ username });
+    }
+    
       
-     catch (err) {
+    else if (categoryName) {
+      postsArray = await Posts.find({
+        categories: {
+          $in: [categoryName],
+        },
+      });
+    } else {
+      // if there are no username or categoryName just return all the posts.
+      postsArray = await Posts.find();
+    }
+    res.status(200).json(postsArray);
+  } catch (err) {
+    // }else if(categoryName){
+    //       postsArray = await Posts.find({ categories:{
+    //             $in:[categoryName]
+    //       } });
+
     res.status(500).json({
       message: `error occurred ${err.message}`,
     });
   }
 });
-
-
 
 module.exports = router;
