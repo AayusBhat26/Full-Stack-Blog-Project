@@ -14,9 +14,12 @@ import {
   ChakraProvider 
 }
 from '@chakra-ui/react'
+import { useContext } from 'react';
+import { Context } from './context/Context';
 function App() {
   // console.log('hi');
-  const user = false;
+  // const user = false;
+  const {user} = useContext(Context);
   return (
     // <ChakraProvider>
     <BrowserRouter>

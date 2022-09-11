@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path')
 const app = express();
 // const cors = require("cors");
 const PORT = 5000;
@@ -11,8 +12,12 @@ const categoryRoute = require("./routes/categories");
 // as i tried to the send the json object fromcd postman, this app or server was not able to send the same, in order to fix this error, we would use, express.json() method.
 const multer = require('multer'); // in order to upload images.
 
+
+
 // app.use(cors);
 app.use(express.json());
+// making the images folder public. 
+app.use('/images', express.static(path.join(__dirname, '/images')))
 // const mongoose = require('mongoose');
 //Set up default mongoose connection
 mongoose

@@ -7,7 +7,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const {
-    user, dispatch, isFetching
+     dispatch, isFetching
   } = useContext(Context);
 
 
@@ -32,7 +32,7 @@ export default function Login() {
     }
   }
 
-console.log(user);
+// console.log(user);
 
 
 
@@ -46,12 +46,14 @@ console.log(user);
 
         <label>Password: </label>
         <input type="password" placeholder="Password" ref={passwordRef} />
-        <button className="loginButton" type="submit">
+        <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
       </form>
-      <button className="loginRegisterButton">Register</button>
-      <Link to="/registers"> Register</Link>
+
+      <Link to="/registers" className='linkBtnLogin'>
+        <button className="loginRegisterButton">Register</button>
+      </Link>
     </div>
   );
 }

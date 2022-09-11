@@ -44,13 +44,22 @@
       font-weight: 1000;
       width: 30vw;
 } */
+.linkBtnLogin{
+      width: 80%;
+      display: grid;
+      place-items: center;
+}
 .loginButton, .loginRegisterButton{ 
       overflow:hidden;
       margin-top: 0.5%;
       color: rgb(135, 135, 208);
       font-weight: 700;
-      width: 10%;
+      width: 20%;
       padding: 10px;
       /* text-align: center; */
       border-radius: 10px;
+}
+.loginButton:disabled{
+      background-color: grey;
+      cursor: not-allowed;
 }
