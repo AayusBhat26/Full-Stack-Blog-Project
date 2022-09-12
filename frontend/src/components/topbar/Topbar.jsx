@@ -37,7 +37,7 @@ export default function Topbar() {
         <div className="topRight">
           
           {user ? (
-            <>
+            <Link to="/settings">
               <img
                 className="topImage"
                 src={user.photo}
@@ -45,7 +45,7 @@ export default function Topbar() {
               />
 
               <i className="fa-solid fa-folder-tree searchIcon"></i>
-            </>
+            </Link>
           ) : (
             <ul className="topList">
               <li className="topListItem">

@@ -1,5 +1,19 @@
+.inputDetailsUpdate{
+  color: red;
+}
+.fileIcon{
+  font-size: 4vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.successMessage{
+  color: rgb(59, 204, 59);
+  text-align: center;
+  margin-top: 3vw;
+}
 .settings {
   display: flex;
+  border: 1px solid red;
 }
 .settingsWrapper {
   flex: 10;
@@ -19,7 +33,7 @@
   width: 10vw;
   height: 10vh;
   border-radius: 50%;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +73,8 @@
   margin-top: 1vw;
 }
 .settingsForm > input{
-      color: gainsboro;
+      /* color: gainsboro; */
+      color: black;
       margin: 12px 0px;
       height: 28px;
       border: none;

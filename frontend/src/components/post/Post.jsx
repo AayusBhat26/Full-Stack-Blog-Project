@@ -28,7 +28,7 @@ export default function Post({singlePostDetails}) {
               <span className="postCat">{eachCat.name}</span>;
             })}
           </div>
-          <span className="postTitle">{singlePostDetails.title}</span> 
+          <span className="postTitle">{singlePostDetails.title}</span>
           {/* <Link to={`/post/${singlePostDetails._id}`} className="link">
           {/* <p className="time">{new Date(postDetails.createdAt).toDateString()}</p> */}
           {/* <Link to={`/post/${singlePostDetails._id}`} className="linkClass"> */}
@@ -37,9 +37,13 @@ export default function Post({singlePostDetails}) {
           <p className="time">
             {new Date(singlePostDetails.createdAt).toDateString()}
           </p>
-          <p className="usernamePostDetails userNamePost">
-            {singlePostDetails.username}
-          </p>
+          <Link to={`/?user=${singlePostDetails.username}`}>
+            {/* <b>{post.username}</b> */}
+            <p className="usernamePostDetails userNamePost">
+              {singlePostDetails.username}
+            </p>
+          </Link>
+
           <p className="desPara">{singlePostDetails.desc}</p>
         </div>
       </div>
