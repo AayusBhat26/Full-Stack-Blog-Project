@@ -3,9 +3,12 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.css'
-
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
 export default function Sidebar() {
   const [cates, setCates ] = useState([]);
+
+  const {user} = useContext(Context);
 
   useEffect(()=>{
     const getCategory = async ()=>{
@@ -17,17 +20,18 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <div className="myImage">
+        {/* <div className="myImage">
           <img
-            src={require("../images/Project-My-Image-temp.jpg")}
+            src={
+              (user.profilePic) ? (user.profilePic): (user.username) 
+            }
             alt=""
             className="MyImage"
           />
-        </div>
-        <span className="sideBarTitle Name">Aayush</span>
-        <p className="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+        </div> */}
+        <span className="sideBarTitle Name">{
+          user.username
+        }</span>
       </div>
       <div className="sidebarItem">
         <br />

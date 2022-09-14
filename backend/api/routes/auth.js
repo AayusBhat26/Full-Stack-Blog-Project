@@ -50,6 +50,7 @@ router.post('/login', async(req, res)=>{
                        });
                   }
             }
+            // console.log(user);
 
             const authPassword = await bcrypt.compare(req.body.password, user.password); 
             // !authPassword && res.status(400).json("No user found");

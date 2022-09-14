@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter>
       <Topbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        {/* <Route exact path="/" element={<Home />} /> */}
         <Route
           exact
           path="/register"

@@ -10,7 +10,7 @@ export default function Write() {
   
   const handleWriteSubmit = async (e) => {
     e.preventDefault();
-
+  
     const newPost = {
       username: user.username,
       title,
@@ -74,6 +74,7 @@ export default function Write() {
             onChange={(e) => setDesc(e.target.value)}
           ></textarea>
         </div>
+        
         <button className="writeSubmit" type="submit">
           Publish
         </button>

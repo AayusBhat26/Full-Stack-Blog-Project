@@ -1,13 +1,14 @@
 import './login.css'
 import {Link} from 'react-router-dom';
-import { useContext, useRef } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { Context } from '../../../context/Context';
 import axios from 'axios';
 export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
+  // const [user] = useState(false);
   const {
-     dispatch, isFetching
+     user, dispatch, isFetching
   } = useContext(Context);
 
 
@@ -49,9 +50,16 @@ export default function Login() {
         <button className="loginButton" type="submit" disabled={isFetching}>
           Login
         </button>
+        {
+          user ? (window.location.replace(
+            <Link to='/home'></Link>
+          )): (
+            <Link to='/login'></Link>
+          )
+        }
       </form>
 
-      <Link to="/registers" className='linkBtnLogin'>
+      <Link to="/register" className='linkBtnLogin'>
         <button className="loginRegisterButton">Register</button>
       </Link>
     </div>

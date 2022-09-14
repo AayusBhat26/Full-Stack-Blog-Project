@@ -37,6 +37,7 @@ export default function SinglePost() {
     fetchPost();
   }, [pathId]);
 
+
 // deleting the post
 
   const handleClickDelete = async()=>{
@@ -53,10 +54,12 @@ export default function SinglePost() {
       // one error componet to display the error message
     }
   }
+  
 // updating the post
   const handleSinglePostUpdate = async()=>{
+    
     try {
-
+      console.log(desc);
       await axios.put(`/posts/${post._id}`, {
         
           username: user.username,
@@ -71,6 +74,7 @@ export default function SinglePost() {
     } catch (err) {
       // one error componet to display the error message
     }
+    
   }
   return (
     <div className="singlepost">
@@ -119,7 +123,7 @@ export default function SinglePost() {
         )}
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Author:{" "}
+            Author:
             <Link to={`/?user=${post.username}`}>
               <b>{post.username}</b>
             </Link>

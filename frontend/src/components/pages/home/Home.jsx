@@ -27,7 +27,7 @@ export default function Home() {
         <Posts posts = {posts}/>
         {/* <Posts / > */}
         {/* <Posts></Posts> */}
-        <Sidebar / >
+        {/* <Sidebar / > */}
 
       </div>
     </>
