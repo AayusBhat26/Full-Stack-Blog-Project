@@ -38,13 +38,13 @@ export default function Topbar() {
           
           {user ? (
             <Link to="/settings">
-              <img
+              {/* <img
                 className="topImage"
                 src={user.photo}
                 alt="image"
-              />
-
-              <i className="fa-solid fa-folder-tree searchIcon"></i>
+              /> */}
+              Hi, {user.username}
+              {/* <i className="fa-solid fa-folder-tree searchIcon"></i> */}
             </Link>
           ) : (
             <ul className="topList">
